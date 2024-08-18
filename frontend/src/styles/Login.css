@@ -1,0 +1,151 @@
+.login_page {
+  background-color: rgb(246, 245, 245);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.back_page_btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--secondary);
+  box-shadow: 1px 1px 10px rgba(4, 0, 17, 0.25);
+}
+.back_page_btn:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+.login_container {
+  background-color: var(--text-white);
+  width: 70vw;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(17, 12, 0, 0.15) 0 48px 100px 0;
+}
+.signup_container {
+  background-color: var(--text-white);
+  width: 70vw;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(17, 12, 0, 0.15) 0 48px 100px 0;
+}
+.login_left {
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 30px;
+  flex: 2;
+  flex-direction: column;
+  position: relative;
+}
+.login_logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: url("../assets/31757456_21-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  justify-self: flex-start;
+}
+.login_left h1 {
+  font-size: var(--font-size-large);
+  color: var(--primary);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.login_left .login_details form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.login_left .login_details form .box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  font-size: var(--font-size-small);
+  color: var(--text);
+}
+.login_left .login_details form .box input {
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+.login_left .login_details form .forget_pass {
+  width: 100%;
+  text-align: right;
+}
+.login_left .login_details form .forget_pass p {
+  font-size: var(--font-size-small);
+  color: var(--primary);
+}
+.login_left .login_details form button {
+  background-color: var(--secondary);
+  border-radius: 4px;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid var(--secondary);
+}
+
+.login_left .login_details .dont_account {
+  text-align: center;
+  font-size: var(--font-size-small);
+}
+.login_left .login_details .dont_account span {
+  color: var(--primary);
+}
+.login_right {
+  background: url("../assets/31757456_21-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 2;
+}
+@media (max-width: 840px) {
+  .login_right {
+    display: none;
+  }
+}
+@media (max-width: 440px) {
+  .login_container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .login_left h1 {
+    font-size: 20px;
+  }
+  .login_logo {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary);
+    margin-bottom: 10px;
+  }
+}

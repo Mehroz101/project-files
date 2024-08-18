@@ -1,0 +1,367 @@
+.profile_page {
+  background-color: var(--background);
+  display: flex;
+}
+.profile_page .profile_left {
+  background-color: #eff4f4;
+  min-height: 90vh;
+  width: 300px;
+  padding: 4rem;
+}
+.profile_page .profile_left ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  font-weight: 500;
+}
+.profile_page .profile_left ul li a {
+  color: #999999;
+}
+.profile_page .profile_left ul li a.active {
+  color: #3e3e3e;
+  font-weight: 600;
+}
+
+/* ******************************************************************* */
+/* *****************   Personal Information    *********************** */
+/* ******************************************************************* */
+
+.profile_right {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: var(--spacing-large);
+}
+.profile_right_form {
+  background-color: white;
+  max-width: 600px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+  border-radius: 4px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+.profile_right_form .profile_from_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile_right_form h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.profile_right_form p.form_text {
+  margin-bottom: 20px;
+  color: #999999;
+  font-size: var(--font-size-small);
+}
+.profile_right_form .input_combo_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.profile_right_form .input_combo_box > div {
+  flex: 1;
+}
+.profile_right_form label {
+  color: #3e3e3e;
+  font-size: 14px;
+  font-weight: 700;
+}
+.profile_right_form input {
+  padding: 10px;
+}
+
+.profile_right_form .profile_from_container form button {
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.profile_right_reset_password {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: white;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-large);
+  border-radius: 4px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+.profile_right_reset_password h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.profile_right_reset_password .input_combo_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.reset_password_from {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reset_password_from label {
+  color: #3e3e3e;
+  font-size: 14px;
+  font-weight: 700;
+}
+.reset_password_from input {
+  padding: 10px;
+}
+.profile_right_reset_password button {
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.profile_right_reset_password button:first-child {
+  align-self: flex-end;
+  background-color: white;
+  gap: 0;
+  color: var(--primary);
+}
+.profile_right_reset_password button:first-child:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+}
+.reset_password_from_hide {
+  display: none;
+}
+.reset_password_from_head_hide {
+  display: none;
+}
+.delete_account_btn {
+  background-color: #ad2727;
+  border-radius: 4px;
+  border: 1px solid #ad2727;
+}
+.delete_account_btn:hover {
+  background-color: #9a2424;
+  border-radius: 4px;
+  border: 1px solid #9a2424;
+}
+
+/* ******************************************************************* */
+/* *****************   Reservation History    *********************** */
+/* ******************************************************************* */
+
+.profile_right .reservation_history_container {
+  background-color: white;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+.profile_right .reservation_history_container .reservation_history_top {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+  border-bottom: 1px solid #e5e5e5;
+}
+.profile_right .reservation_history_container .reservation_history_top select {
+  padding: 5px;
+  font-weight: 600;
+  outline: none;
+}
+.profile_right .reservation_history_container .reservation_history_bottom {
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+  height: 80vh;
+  overflow: scroll;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .reservation_orders {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order {
+  border: 1px solid #e5e5e5;
+  padding: var(--spacing-small);
+  display: flex;
+  gap: 10px;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_left
+  img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_top {
+  display: flex;
+  justify-content: space-between;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_top
+  h3 {
+  font-size: var(--font-size-base);
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_top
+  span {
+  font-size: var(--font-size-small);
+  color: #3e3e3e;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_datetime {
+  display: flex;
+  gap: 50px;
+  font-size: var(--font-size-small);
+  color: #3e3e3e;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_price
+  p {
+  font-size: var(--font-size-base);
+  color: #3e3e3e;
+  font-weight: 600;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn {
+  display: flex;
+  justify-content: space-between;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn
+  button {
+  background-color: var(--primary);
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn
+  .status
+  > span {
+  font-size: var(--font-size-small);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn
+  .status
+  .cancel {
+  background-color: #c86666;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn
+  .status
+  .pending {
+  background-color: #c8b066;
+}
+.profile_right
+  .reservation_history_container
+  .reservation_history_bottom
+  .order_right
+  .order_right_btn
+  .status
+  .complete {
+  background-color: #78c866;
+}
+
+/* ******************************************************************* */
+/* *****************      Media Queries      *********************** */
+/* ******************************************************************* */
+@media (max-width: 996px) {
+  .profile_left {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .profile_right
+    .reservation_history_container
+    .reservation_history_bottom
+    .order_left
+    img {
+    width: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .profile_right
+    .reservation_history_container
+    .reservation_history_top
+    h2{
+    font-size: var(--font-size-base);
+  }
+  .profile_right
+    .reservation_history_container
+    .reservation_history_top
+    select {
+    padding: 2px;
+  }
+  .profile_right
+    .reservation_history_container
+    .reservation_history_bottom
+    .order_left {
+    display: none;
+  }
+  .profile_right
+    .reservation_history_container
+    .reservation_history_bottom
+    .order_right
+    .order_right_btn
+    button {
+    font-size: 13px;
+    padding: 4px;
+  }
+}
