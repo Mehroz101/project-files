@@ -1,31 +1,30 @@
 import React from "react";
 import "../styles/ManageSpace.css";
 import { Link } from "react-router-dom";
-import RequestRow from "./RequestRow";
+import SpaceRow from "./SpaceRow";
+import "../styles/ManageSpace.css"
 const ManageSpace = () => {
   return (
     <>
-      <div className="reservation_request_container">
+      <div className="manage_space_container">
         <h2>Manage Space</h2>
-        <div className="create_request">
+        <div className="create_space">
           <Link>
             <button>List New Space</button>
           </Link>
         </div>
-        <div className="requests_numbers requests_numbers_hide">
-          <div className="request_day">
-            <h2>Today</h2>
-          </div>
-          <div className="total_request">
-            <p>Total request</p>
+        <div className="space_numbers space_numbers_hide">
+          
+          <div className="total_space">
+            <p>Total listing</p>
             <h2>42</h2>
           </div>
-          <div className="pending_request">
-            <p>Pending request</p>
+          <div className="active_space">
+            <p>Active listing</p>
             <h2>12</h2>
           </div>
-          <div className="total_completed_request">
-            <p>Total completed request</p>
+          <div className="deactived_space">
+            <p>Deactivated listing</p>
             <h2>112</h2>
           </div>
         </div>
@@ -35,17 +34,15 @@ const ManageSpace = () => {
               <Link>All</Link>
             </li>
             <li>
-              <Link>completed</Link>
+              <Link>Active</Link>
             </li>
             <li>
-              <Link>running</Link>
+              <Link>Deactive</Link>
             </li>
             <li>
-              <Link>pending</Link>
+              <Link>Badge</Link>
             </li>
-            <li>
-              <Link>canceled</Link>
-            </li>
+           
           </ul>
         </div>
         <div className="search_filter">
@@ -59,35 +56,36 @@ const ManageSpace = () => {
               <button>search</button>
             </div>
           </div>
-          <select name="filter_option">
+          {/* <select name="filter_option">
             <option value="pending">pending</option>
             <option value="complete">complete</option>
             <option value="cancel">canceled</option>
-          </select>
+          </select> */}
         </div>
-        <div className="reservation_request_list">
+        <div className="manage_space_list">
           <table className="highlight responsive_table">
             <thead>
               <tr>
                 <th>Id</th>
                 <th>Image</th>
                 <th>Title</th>
-                <th>Request Id</th>
-                <th>Arrival</th>
-                <th>Leave</th>
+                <th>Badge</th>
+                <th>Reservation Id</th>
+                <th>Total Booking</th>
                 <th>Price</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <RequestRow />
-              <RequestRow />
-              <RequestRow />
-              <RequestRow />
-              <RequestRow />
-              <RequestRow />
-              <RequestRow />
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
+              <SpaceRow/>
             </tbody>
           </table>
         </div>

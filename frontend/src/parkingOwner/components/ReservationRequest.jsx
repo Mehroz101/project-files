@@ -8,7 +8,7 @@ const ReservationRequest = () => {
       <div className="reservation_request_container">
         <h2>Reservation Request</h2>
         <div className="create_request">
-          <Link>
+          <Link to="create-request">
             <button>create request</button>
           </Link>
         </div>

@@ -9,19 +9,34 @@ import Profile from "./pages/Profile";
 import Reservation from "./pages/Reservation";
 import ListyourSpace from "./components/ListyourSpace";
 import ParkingOwnerDashboard from "./parkingOwner/pages/ParkingOwnerDashboard";
+import ReservationRequest from "./parkingOwner/components/ReservationRequest";
+import ManageSpace from "./parkingOwner/components/ManageSpace";
+import DashboardContainer from "./parkingOwner/components/DashboardContainer";
+import CreateRequest from "./parkingOwner/components/CreateRequest";
 
 function App() {
-  return <>
+  return (
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/searchResult" element={<MainApp/>}/>
-      <Route path="/profile" element={<Profile/>}/> 
-      <Route path="/reservation" element={<Reservation/>}/> 
-      <Route path="/listyourspace" element={<ListyourSpace/>}/> 
-      <Route path="/dashboard" element={<ParkingOwnerDashboard/>}/> 
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/searchResult" element={<MainApp />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/reservation" element={<Reservation />} />
+      <Route path="/listyourspace" element={<ListyourSpace />} />
+      
+      {/* Dashboard Route */}
+      <Route path="/dashboard" element={<ParkingOwnerDashboard />}>
+        <Route index element={<DashboardContainer />} /> {/* Default Dashboard Container */}
+        
+        {/* Nested routes under ReservationRequest */}
+        <Route path="reservation-request" element={<ReservationRequest />} />
+        <Route path="reservation-request/create-request" element={<CreateRequest />} />
+        
+        {/* Other routes */}
+        <Route path="manage-space" element={<ManageSpace />} />
+      </Route>
     </Routes>
-  </>;
+  );
 }
 
 export default App;
