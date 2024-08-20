@@ -13,6 +13,7 @@ import ReservationRequest from "./parkingOwner/components/ReservationRequest";
 import ManageSpace from "./parkingOwner/components/ManageSpace";
 import DashboardContainer from "./parkingOwner/components/DashboardContainer";
 import CreateRequest from "./parkingOwner/components/CreateRequest";
+import CreateSpace from "./parkingOwner/components/CreateSpace";
 
 function App() {
   return (
@@ -27,13 +28,13 @@ function App() {
       {/* Dashboard Route */}
       <Route path="/dashboard" element={<ParkingOwnerDashboard />}>
         <Route index element={<DashboardContainer />} /> {/* Default Dashboard Container */}
-        
         {/* Nested routes under ReservationRequest */}
         <Route path="reservation-request" element={<ReservationRequest />} />
         <Route path="reservation-request/create-request" element={<CreateRequest />} />
         
         {/* Other routes */}
         <Route path="manage-space" element={<ManageSpace />} />
+        <Route path="manage-space/create-space" element={<CreateSpace />} />
       </Route>
     </Routes>
   );

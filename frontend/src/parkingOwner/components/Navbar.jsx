@@ -13,19 +13,18 @@ const Navbar = () => {
           <div className={navbar ? `nav_right nav_show` : `nav_right`}>
             <div className="nav_right_list">
               <ul>
-                <li>
-                  <Link to="/">Dashboard</Link>
-                </li>
-
-                <li>
-                  <Link>Manage Space</Link>
-                </li>
-                <li>
-                  <Link>Reservation Request</Link>
-                </li>
-                <li>
-                  <Link>Earning</Link>
-                </li>
+              <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="reservation-request">Reservation Request</Link>
+            </li>
+            <li>
+              <Link to="manage-space">Manage Space</Link>
+            </li>
+            <li>
+              <Link to="earning">Earning</Link>
+            </li>
                 
               </ul>
             </div>

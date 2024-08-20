@@ -9,7 +9,7 @@ const ManageSpace = () => {
       <div className="manage_space_container">
         <h2>Manage Space</h2>
         <div className="create_space">
-          <Link>
+          <Link to="create-space">
             <button>List New Space</button>
           </Link>
         </div>
