@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css"
+import "../styles/Navbar.css";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [profileNav, setProfileNav] = useState(false);
   return (
     <>
       <nav className="container">
@@ -25,16 +26,40 @@ const Navbar = () => {
                 <li>
                   <Link>Contact</Link>
                 </li>
-                <li>
-                  <Link to="/profile">Profile</Link>
+                <li className="profile">
+                  <Link
+                    to="/profile"
+                    onClick={() => setProfileNav(!profileNav)}
+                  >
+                    <i class="fa-solid fa-user"></i>
+                    <span>mehroz farooq</span>
+                  </Link>
                 </li>
+                {profileNav && (
+                  <>
+                    <ul className="profile_links">
+                      <li>
+                        <Link to="booking">Booking</Link>
+                      </li>
+                      <li>
+                        <Link to="">Messages</Link>
+                      </li>
+                      <li>
+                        <Link to="listyourspace">List your space</Link>
+                      </li>
+                      <li>
+                        <Link to="">Logout</Link>
+                      </li>
+                    </ul>
+                  </>
+                )}
               </ul>
             </div>
-            <div className="nav_right_btn">
+            {/* <div className="nav_right_btn">
               <Link to="/login">
                 <button>Login</button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <div

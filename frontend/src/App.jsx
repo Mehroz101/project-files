@@ -14,6 +14,8 @@ import ManageSpace from "./parkingOwner/components/ManageSpace";
 import DashboardContainer from "./parkingOwner/components/DashboardContainer";
 import CreateRequest from "./parkingOwner/components/CreateRequest";
 import CreateSpace from "./parkingOwner/components/CreateSpace";
+import AccountInformation from "./components/AccountInformation";
+import ReservationHistory from "./components/ReservationHistory";
 
 function App() {
   return (
@@ -21,17 +23,23 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/searchResult" element={<MainApp />} />
-      <Route path="/profile" element={<Profile />} />
+
+      <Route path="/profile" element={<Profile />} >
+
+        <Route index element={<AccountInformation />} />
+        <Route path="booking" element={<ReservationHistory />} />
+        <Route path="listyourspace" element={<ListyourSpace />} />
+
+      </Route>
       <Route path="/reservation" element={<Reservation />} />
       <Route path="/listyourspace" element={<ListyourSpace />} />
-      
       {/* Dashboard Route */}
       <Route path="/dashboard" element={<ParkingOwnerDashboard />}>
         <Route index element={<DashboardContainer />} /> {/* Default Dashboard Container */}
         {/* Nested routes under ReservationRequest */}
         <Route path="reservation-request" element={<ReservationRequest />} />
         <Route path="reservation-request/create-request" element={<CreateRequest />} />
-        
+
         {/* Other routes */}
         <Route path="manage-space" element={<ManageSpace />} />
         <Route path="manage-space/create-space" element={<CreateSpace />} />

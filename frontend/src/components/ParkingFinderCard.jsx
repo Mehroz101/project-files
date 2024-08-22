@@ -5,7 +5,7 @@ const ParkingFinderCard = () => {
     <>
       <div className="parking_finder_card">
         <form action="">
-          <input type="text" placeholder="Location" name="location" />
+          <input type="text" placeholder="Location" className="location" name="location" />
           <div className="date_time">
           <div className="arrival">
             <label htmlFor="arrival">Arrival</label>

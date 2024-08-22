@@ -38,7 +38,8 @@
 }
 .signup_container {
   background-color: var(--text-white);
-  width: 70vw;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row-reverse;
   border-radius: 10px;

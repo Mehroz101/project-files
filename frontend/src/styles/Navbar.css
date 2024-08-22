@@ -15,6 +15,27 @@ nav {
   z-index: 100;
   width: 100vw;
 }
+.profile a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  
+}
+.profile i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  
+  border-radius: 50%;
+}
+.profile_links {
+  display: none !important;
+}
+
 .menu_icon {
   display: none;
 }
@@ -60,6 +81,14 @@ nav {
     flex-direction: column;
     gap: 50px;
     flex: 1;
+  }
+
+  .profile_links {
+    display: block !important;
+    padding-left: 50px;
+  }
+  .profile_links li {
+    padding: 5px 0;
   }
   .menu_icon {
     display: inline;

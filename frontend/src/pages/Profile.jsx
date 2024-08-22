@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Profile.css";
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
-import AccountInformation from "../components/AccountInformation";
-import ReservationHistory from "../components/ReservationHistory";
-import ListyourSpace from "../components/ListyourSpace";
+import { Link , Outlet} from "react-router-dom";
 const Profile = () => {
   return (
     <>
@@ -13,16 +10,16 @@ const Profile = () => {
         <div className="profile_left">
           <ul>
             <li>
-              <Link className="active">My Profile</Link>
+              <Link className="active" to="/profile">My Profile</Link>
             </li>
             <li>
-              <Link>Booking</Link>
+              <Link to="booking">Booking</Link>
             </li>
             <li>
               <Link>Message</Link>
             </li>
             <li>
-              <Link>List Your Space</Link>
+              <Link to="listyourspace">List Your Space</Link>
             </li>
             <li>
               <Link>Logout</Link>
@@ -30,10 +27,11 @@ const Profile = () => {
           </ul>
         </div>
         <div className="profile_right">
+        <Outlet />
 
-        {/* <AccountInformation/> */}
-        {/* <ReservationHistory/> */}
-        <ListyourSpace/>
+        {/* <AccountInformation/>
+        <ReservationHistory/> 
+        <ListyourSpace/> */}
         </div>
       </div>
     </>

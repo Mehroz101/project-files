@@ -14,6 +14,7 @@
   padding: var(--spacing-small) var(--spacing-large);
   flex: 0;
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 .parking_finder_card {
@@ -29,6 +30,9 @@
   max-width: 100%;
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
 }
+.parking_finder_card form input.location{
+  max-width: 100%;
+}
 .parking_finder_card form {
   display: flex;
   flex-direction: column;
@@ -39,14 +43,14 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 90%;
+  max-width: 100%;
 }
 .parking_finder_card form .arrival,
 .parking_finder_card form .leave {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: 50%;
+  width: 50%;
 }
 .parking_finder_card form .btn {
   padding: var(--spacing-medium);
@@ -58,7 +62,7 @@
   display: flex;
   justify-content: center;
   flex: 1;
-  min-width: 380px;
+  min-width: 200px;
   max-width: 500px;
 }
 
@@ -111,7 +115,7 @@
 }
 .big_box .box_left {
   flex: 0;
-  min-width: 400px;
+  min-width: 100% !important;
   height: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -126,7 +130,7 @@
 .big_box .box_right {
   flex: 1;
   padding: var(--spacing-medium) var(--spacing-large);
-  min-width: 400px;
+  min-width: 200px;
 }
 .big_box .box_right h1 {
   color: var(--primary);
@@ -264,5 +268,14 @@ footer {
   }
   .big_box2 .box_right {
     width: 100%;
+  }
+}
+@media(max-width:530px){
+  .hero_section{
+    /* overflow: h idden; */
+  }
+  .hero_left {
+    padding: 0 !important;
+
   }
 }
