@@ -19,7 +19,8 @@
   width: 100%;
 }
 .space_detail_text > div textarea {
-  border: 1px solid var(--secondary);
+  border: 1px solid #dddddd;
+  border-radius: 4px;
   padding: var(--spacing-medium);
 }
 .create_space > div {
@@ -127,75 +128,48 @@
   min-width: none;
 }
 
-.create_space .customer_information h2 {
+.create_space .features h2 {
   color: var(--primary);
   margin-bottom: 20px;
 }
-.create_space .customer_information .input_combo_box {
+.create_space .features .input_combo_box {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20;
   margin-bottom: 20px;
 }
 
-.create_space .customer_information .input_box {
-  min-width: none;
-  flex: 1;
-}
-.create_space .customer_information .input_box input {
-  padding: 10px;
-}
-
-.create_space .vehicle_information h2 {
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-.create_space .vehicle_information .input_box {
-  margin-bottom: 20px;
-}
-.create_space .vehicle_information .input_box input {
-  padding: 10px;
-}
-
-.create_space .payment_information {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.create_space .payment_information h2 {
-  color: var(--primary);
-}
-.create_space .payment_information p {
-  font-weight: 300;
-}
-.create_space .payment_information .payment_form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.create_space .payment_information .payment_form input {
-  padding: 10px;
-}
-.create_space .payment_information .payment_form .input_combo_box {
+.create_space .features .input_box {
   display: flex;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
 }
-.create_space .payment_information .payment_form .input_combo_box > div {
-  flex: 1;
-}
-.create_space .payment_information .payment_form .input_select_box {
-  display: flex;
-  flex-direction: column;
-}
-.create_space .payment_information .payment_form .input_select_box select {
+.create_space .features .input_box input {
   padding: 10px;
-  border-color: #e5e5e5;
-  font-size: 16px;
 }
 
-.create_space .paynow_reserve {
+.create_space .pricing h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+.create_space .pricing .input_combo_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.create_space .pricing .input_box input {
+  padding: 10px;
+}
+
+
+
+.create_space .list_space {
   border-radius: 4px;
   font-weight: 500;
   font-size: 18px;

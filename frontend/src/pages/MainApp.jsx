@@ -8,7 +8,15 @@ import ListingDetail from "../components/ListingDetail";
 const MainApp = () => {
   const [togglebtn, setToggelbtn] = useState(false);
   const [parkingInput, setParkingInput] = useState(false);
+  const [showListingDetail, setShowListingDetail] = useState(false); // State to control ListingDetail visibility
 
+  const handleShowDetail = () => {
+    setShowListingDetail(true); // Show ListingDetail
+  };
+
+  const handleCloseDetail = () => {
+    setShowListingDetail(false); // Hide ListingDetail
+  };
   console.log(parkingInput);
   return (
     <>
@@ -65,13 +73,17 @@ const MainApp = () => {
                     : "Listing_container"
                 }
               >
-                <ListingContainer />
+                <ListingContainer onShowDetail={handleShowDetail}/>
                 <ListingContainer />
                 <ListingContainer />
                 <ListingContainer />
               </div>
             </div>
-            {/* <ListingDetail /> */}
+            {showListingDetail && (
+              <div className="popup_detail">
+                <ListingDetail onHideDetail={handleCloseDetail} />
+              </div>
+            )}
           </div>
           <div
             className={togglebtn ? "app_right" : "app_right app_right_hide"}

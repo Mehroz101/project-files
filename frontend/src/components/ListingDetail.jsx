@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img from "../assets/hero_img.png";
-const ListingDetail = () => {
+const ListingDetail = ({onHideDetail}) => {
   //check this logic in listingContainer.jsx file
   // const [showlisting,setShowlisting] = useState(false)
   // {showlisting?"listing_detail_container listing_detail_container_hide":"listing_detail_container"}
@@ -9,7 +9,7 @@ const ListingDetail = () => {
     <>
       <div className="listing_detail_container" >
         <div className="back_btn">
-          <span>x</span>
+          <span onClick={onHideDetail}><i class="fa-solid fa-xmark"></i></span>
         </div>
         <div className="listing_detail_image_box">
           <img src={img} alt="" />

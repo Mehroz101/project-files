@@ -1,14 +1,38 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+
+
+  const navbarRef = useRef(null); // Reference to the navbar element
+
+  const location = useLocation(); // Hook to get current location
+
+  // Hide navbar when navigating to a different route
+  useEffect(() => {
+    setNavbar(false);
+  }, [location]);
+
+  // Handle clicks outside the navbar to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setNavbar(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
-      <nav className="dashboard_container_nav">
+      <nav className="dashboard_container_nav" ref={navbarRef}>
         <div className="nav_items">
           <div className="nav_left">
-            <h1>Parkify</h1>
+            <h1> <Link to="/">Parkify</Link></h1>
           </div>
           <div className={navbar ? `nav_right nav_show` : `nav_right`}>
             <div className="nav_right_list">
@@ -37,7 +61,7 @@ const Navbar = () => {
             setNavbar(!navbar);
           }}
         >
-          PPP
+          <i className="fa-solid fa-bars"></i>
         </div>
       </nav>
     </>

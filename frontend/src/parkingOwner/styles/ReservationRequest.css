@@ -4,7 +4,7 @@
 .reservation_request_container .create_request {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   margin: var(--spacing-medium) 0;
 }
 
@@ -45,7 +45,7 @@
 .reservation_request_container .filter_navbar {
   margin: var(--spacing-large) 0;
   border-bottom: 1px solid #dddddd;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 .reservation_request_container .filter_navbar ul {
   display: flex;

@@ -22,7 +22,7 @@
 .dashboard_container_nav .nav_left {
   flex: 1;
 }
-.dashboard_container_nav .nav_left h1 {
+.dashboard_container_nav .nav_left h1 a {
   color: var(--text-white);
 }
 .dashboard_container_nav .nav_right {
@@ -65,6 +65,8 @@
   .dashboard_container_nav .menu_icon {
     display: inline;
     cursor: pointer;
+    color: var(--text-white);
+    font-size: var(--font-size-large);
   }
   .dashboard_container_nav .nav_right {
     flex-direction: column;

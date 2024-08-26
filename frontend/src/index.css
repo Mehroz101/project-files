@@ -4,9 +4,9 @@
   --text:#212121;
   --text-white:#f7f7f7;
   --background:#fefefe;
-  --primary:#275dad;
-  --secondary:#022b3a;
-  --accent:#5bc0be;
+  --primary:#050232;
+  --secondary:#23c579;
+  --accent:#050232;
 
 
   --font-size-base:1rem;
@@ -31,4 +31,6 @@ body{
   color: var(--text);
   font-size: var(--font-size-base);
   line-height: var(--line-height);
+  font-family: "Rubik", sans-serif;
+
 }

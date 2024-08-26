@@ -30,73 +30,43 @@ const CreateSpace = () => {
         <div className="file_upload">
           <FileUpload />
         </div>
-        <div className="customer_information">
-          <h2>Customer information</h2>
-          <div className="input_container">
+        <div className="features">
+          <h2>Features</h2>
+          <div className="features_container">
             <div className="input_combo_box">
               <div className="input_box">
-                <label htmlFor="name">Name</label>
-                <input type="text" placeholder="Enter name" />
+                <label htmlFor="cctv">CCTV</label>
+                <input type="checkbox" id="cctv"/>
               </div>
               <div className="input_box">
-                <label htmlFor="email">Email</label>
-                <input type="email" placeholder="Enter email" />
+                <label htmlFor="underground">Underground</label>
+                <input type="checkbox" id="underground"/>
               </div>
+              <div className="input_box">
+                <label htmlFor="secure">Secure</label>
+                <input type="checkbox" id="secure"/>
+              </div>
+             
             </div>
-            <div className="input_box">
-              <label htmlFor="phone_number">Phone number</label>
-              <input type="number" placeholder="Enter phone number" />
-            </div>
+          
           </div>
         </div>
-        <div className="vehicle_information">
-          <h2>Vehicle information</h2>
-          <div className="input_container">
+        <div className="pricing">
+          <h2>Pricing</h2>
+          <div className="input_combo_box">
             <div className="input_box">
-              <label htmlFor="license">License number</label>
-              <input type="text" placeholder="Enter License Plate Number" />
+              <label htmlFor="per_hour">Per Hour</label>
+              <input type="numer" placeholder="" />
+            </div>
+            <div className="input_box">
+              <label htmlFor="per_day">Per Day</label>
+              <input type="numer" placeholder="" />
             </div>
           </div>
+
         </div>
-        <div className="payment_information">
-          <h2>Payment information</h2>
-          <p>All Payment are Secure and Encrypted</p>
-          <div className="payment_form">
-            <div className="input_box">
-              <label htmlFor="name">Cardholder Name</label>
-              <input type="text" placeholder="Enter Cardholder Name" />
-            </div>
-            <div className="input_box">
-              <label htmlFor="card_number">Card Name</label>
-              <input type="number" placeholder="4111 111 111 111" />
-            </div>
-            <div className="input_combo_box">
-              <div className="input_box">
-                <label htmlFor="expire">Expiry</label>
-                <input type="date" placeholder="08/12/2024" />
-              </div>
-              <div className="input_box">
-                <label htmlFor="cvv">CVV</label>
-                <input type="number" placeholder="1234" />
-              </div>
-            </div>
-            <div className="input_combo_box">
-              <div className="input_box">
-                <label htmlFor="zip_code">Billing Zip Code</label>
-                <input type="text" placeholder="Enter Zip Code" />
-              </div>
-              <div className="input_select_box">
-                <label htmlFor="country">Country</label>
-                <select name="country" id="country">
-                  <option value="pakistan">Pakistan</option>
-                  <option value="india">India</option>
-                  <option value="united state">United State</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="paynow_reserve">Reserve</button>
+     
+        <button className="list_space">List New Space</button>
       </div>
     </>
   );

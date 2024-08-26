@@ -1,0 +1,106 @@
+.messages_box {
+    margin-top: 20px;
+    display: flex;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+}
+
+.messages_box .message_box_left {
+    flex: 1;
+    background-color: #d8e7ff;
+    overflow-y: scroll;
+    height: 400px;
+    display: block;
+    overflow-x: hidden;
+}
+
+.back_btn {
+    display: none;
+}
+
+.messages_box .message_box_left .user_chat {
+    font-size: 14px;
+    padding: var(--spacing-small);
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.messages_box .message_box_left .user_chat:hover {
+    background-color: #d8e7ff;
+    cursor: pointer;
+}
+
+.messages_box .message_box_left .user_chat .username span {
+    font-weight: 600;
+}
+
+.messages_box .message_box_left .user_chat .user_lastmessage {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.messages_box .message_box_right {
+    flex: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 400px;
+    /* background-color: rgb(2, 85, 85); */
+}
+
+
+
+.message {
+    text-align: left;
+    width: 95%;
+    margin: 6px;
+    background-color: #d8e7ff;
+    padding: var(--spacing-small);
+    border-radius: 4px 4px 4px 0px;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+}
+
+
+
+/* @media(max-width:460px) {
+    .message_box_left {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        
+        height: 400px !important;
+    }
+
+    .back_btn {
+        position:fixed;
+        display: block;
+        border-radius: 50px;
+        color: var(--text-white);
+        cursor: pointer;
+        background-color: #0e73d1;
+    }
+
+    .message_box_left_hide {
+        display: none;
+    }
+.message_box_right_hide{
+    display: none;
+}
+    .message_box_right {
+        height: 400px;
+    }
+    .messages_box .message_box_right .user_messages {
+        background-color: #f6f9ff;
+        padding: var(--spacing-small);
+        height: 260px !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+    }
+} */

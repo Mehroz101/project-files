@@ -35,7 +35,7 @@ const CreateRequest = () => {
               <input type="time" />
             </div>
             <div className="leave input_combo_box">
-              <label htmlFor="">Arrival</label>
+              <label htmlFor="">Leave</label>
               <input type="date" />
               <input type="time" />
             </div>

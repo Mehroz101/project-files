@@ -16,7 +16,7 @@ const Profile = () => {
               <Link to="booking">Booking</Link>
             </li>
             <li>
-              <Link>Message</Link>
+              <Link to="message">Message</Link>
             </li>
             <li>
               <Link to="listyourspace">List Your Space</Link>
