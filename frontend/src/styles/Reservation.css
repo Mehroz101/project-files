@@ -3,7 +3,6 @@
   justify-content: space-evenly;
   background-color: #f3f7f9;
   gap: 20px;
-
   padding: var(--spacing-large);
 }
 .reservation_detail_left {
@@ -53,7 +52,7 @@
 }
 .reservation_detail_left .booking_detail_bottom h3 {
   font-size: var(--font-size-base);
-  color: var(--secondary);
+  color: var(--primary);
 }
 .reservation_detail_left .booking_detail_bottom p {
   font-size: var(--font-size-small);
@@ -147,6 +146,7 @@
   width: 80%;
   background-color: white;
   padding: 10px;
+  border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
 }
 .reservation_detail_right_box .listing_detail_container {

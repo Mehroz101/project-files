@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/ParkingOwnerDashboard.css"; // Import your routes
 
+
 const ParkingOwnerDashboard = () => {
   return (
     <>
@@ -27,6 +28,7 @@ const ParkingOwnerDashboard = () => {
         <div className="dashboard_right">
         
           <Outlet />
+          
         </div>
       </div>
     </>

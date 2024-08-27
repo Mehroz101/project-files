@@ -1,95 +1,114 @@
 import React from "react";
 import Img from "../assets/hero_img.png";
+
 const ReservationHistory = () => {
   return (
-    <>
-      <div className="reservation_history_container">
-        <div className="reservation_history_top">
-          <h2>Booking History</h2>
-          <select name="filter" id="filter">
-            <option value="pending">pending</option>
-            <option value="completed">completed</option>
-            <option value="canceled">canceled</option>
-          </select>
-        </div>
-        <div className="reservation_history_bottom">
-          <div className="reservation_orders">
-            <div className="order">
-              <div className="order_left">
-                <img src={Img} alt="" />
-              </div>
-              <div className="order_right">
-                <div className="order_right_top">
-                  <h3>Mall of Multan, Multan</h3>
-                  <span>id:12345</span>
-                </div>
-                <div className="order_right_datetime">
-                  <span className="arrival">08/14/24 4:00PM</span>
-                  <span className="leave">08/14/24 7:00PM</span>
-                </div>
-                <div className="order_right_price">
-                  <p>Reserved in $7</p>
-                </div>
-                <div className="order_right_btn">
-                  <button>Reserve Again</button>
-                  <div className="status">
-                    <span className="cancel">canceled</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="order">
-              <div className="order_left">
-                <img src={Img} alt="" />
-              </div>
-              <div className="order_right">
-                <div className="order_right_top">
-                  <h3>Mall of Multan, Multan</h3>
-                  <span>id:12345</span>
-                </div>
-                <div className="order_right_datetime">
-                  <span className="arrival">08/14/24 4:00PM</span>
-                  <span className="leave">08/14/24 7:00PM</span>
-                </div>
-                <div className="order_right_price">
-                  <p>Reserved in $7</p>
-                </div>
-                <div className="order_right_btn">
-                  <button>Reserve Again</button>
-                  <div className="status">
-                    <span className="complete">completed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="order">
-              <div className="order_left">
-                <img src={Img} alt="" />
-              </div>
-              <div className="order_right">
-                <div className="order_right_top">
-                  <h3>Mall of Multan, Multan</h3>
-                  <span>id:12345</span>
-                </div>
-                <div className="order_right_datetime">
-                  <span className="arrival">08/14/24 4:00PM</span>
-                  <span className="leave">08/14/24 7:00PM</span>
-                </div>
-                <div className="order_right_price">
-                  <p>Reserved in $7</p>
-                </div>
-                <div className="order_right_btn">
-                  <button>Reserve Again</button>
-                  <div className="status">
-                    <span className="pending">pending</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="reservation_history_container">
+      <h2>Booking History</h2>
+      <div className="filter_navbar">
+        <select name="filter" id="filter">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="canceled">Canceled</option>
+        </select>
       </div>
-    </>
+      <div className="reservation_list">
+        <table className="highlight responsive_table">
+          <thead>
+            <tr>
+              <th>S No.</th>
+              <th>Image</th>
+              <th>Location</th>
+              <th>Reservation ID</th>
+              <th>Arrival</th>
+              <th>Leave</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <img src={Img} alt="Reservation" />
+              </td>
+              <td>Mall of Multan, Multan</td>
+              <td>12345</td>
+              <td>08/14/24 4:00PM</td>
+              <td>08/14/24 7:00PM</td>
+              <td>$7</td>
+              <td>
+                <span className="status canceled">Canceled</span>
+              </td>
+              <td>
+                {/* <button>Direction</button>
+                <button>Review</button> */}
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+
+              <td>
+                <img src={Img} alt="Reservation" />
+              </td>
+              <td>Mall of Multan, Multan</td>
+              <td>12345</td>
+              <td>08/14/24 4:00PM</td>
+              <td>08/14/24 7:00PM</td>
+              <td>$7</td>
+              <td>
+                <span className="status completed">Completed</span>
+              </td>
+              <td>
+              {/* <button>Direction</button> */}
+              <button>Review</button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+
+              <td>
+                <img src={Img} alt="Reservation" />
+              </td>
+              <td>Mall of Multan, Multan</td>
+              <td>12345</td>
+              <td>08/14/24 4:00PM</td>
+              <td>08/14/24 7:00PM</td>
+              <td>$7</td>
+              <td>
+                <span className="status pending">Pending</span>
+              </td>
+              <td>
+              <button>Direction</button>
+              {/* <button>Review</button> */}
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+
+              <td>
+                <img src={Img} alt="Reservation" />
+              </td>
+              <td>Mall of Multan, Multan</td>
+              <td>12345</td>
+              <td>08/14/24 4:00PM</td>
+              <td>08/14/24 7:00PM</td>
+              <td>$7</td>
+              <td>
+                <span className="status confirm">Confirmed</span>
+              </td>
+              <td>
+              <button>Direction</button>
+              {/* <button>Review</button> */}
+              </td>
+            </tr>
+            {/* Add more rows as needed */}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 

@@ -9,6 +9,8 @@
 .dashboard_navigator {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
   border-radius: 8px;
   width: 100%;

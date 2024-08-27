@@ -12,7 +12,7 @@ const Reservation = () => {
           <div className="booking_detail">
             <div className="booking_detail_top">
               <h2>Booking detail</h2>
-              <Link>edit</Link>
+              <Link to="/searchResult">edit</Link>
             </div>
             <div className="booking_detail_bottom">
               <div className="booking_location">

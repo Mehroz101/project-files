@@ -1,18 +1,45 @@
 import React, { useState } from "react";
-import img from "../assets/hero_img.png";
-const ListingDetail = ({onHideDetail}) => {
-  //check this logic in listingContainer.jsx file
-  // const [showlisting,setShowlisting] = useState(false)
-  // {showlisting?"listing_detail_container listing_detail_container_hide":"listing_detail_container"}
-  // onClick={()=>setShowlisting(!showlisting)}
+import img1 from "../assets/listingImg-1.png";
+import img2 from "../assets/listingImg-2.png";
+// import img3 from "../assets/listingImg-2.png"; // Add more images as needed
+
+const images = [img1, img2]; // Array of images
+
+const ListingDetail = ({ onHideDetail }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePreviousImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <>
-      <div className="listing_detail_container" >
+      <div className="listing_detail_container">
         <div className="back_btn">
-          <span onClick={onHideDetail}><i class="fa-solid fa-xmark"></i></span>
+          <span onClick={onHideDetail}>
+            <i className="fa-solid fa-xmark"></i>
+          </span>
         </div>
         <div className="listing_detail_image_box">
-          <img src={img} alt="" />
+          <button className="prev_btn" onClick={handlePreviousImage}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <img
+            src={images[currentImageIndex]}
+            alt="Listing"
+            className="listing_image"
+          />
+          <button className="next_btn" onClick={handleNextImage}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
         <div className="listing_detail_section">
           <h2 className="listing_detail_title">Mall of Multan, Multan</h2>
@@ -24,7 +51,13 @@ const ListingDetail = ({onHideDetail}) => {
             </span>
           </div>
           <div className="listing_rating">
-            <span className="rating">* * * *</span>
+            <span className="rating">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+            </span>
             <span className="total_booking">100+ booking</span>
           </div>
         </div>
@@ -45,7 +78,7 @@ const ListingDetail = ({onHideDetail}) => {
         <div className="listing_detail_features">
           <span className="feature">CCTV</span>
           <span className="feature">Underground</span>
-          <span className="feature">secure</span>
+          <span className="feature">Secure</span>
         </div>
         <div className="listing_detail_description">
           <h3>Description</h3>
