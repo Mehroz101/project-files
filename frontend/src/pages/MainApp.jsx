@@ -63,7 +63,7 @@ const MainApp = () => {
                   className="toggle_btn"
                   onClick={() => setToggelbtn(!togglebtn)}
                 >
-                  {togglebtn ? "map" : "list"}
+                  {togglebtn ? "list" : "map"}
                 </button>
               </div>
               <div

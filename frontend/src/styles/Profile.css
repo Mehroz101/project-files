@@ -82,7 +82,7 @@
 
 .profile_right_form .profile_from_container form button {
   border-radius: 8px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border: none;
   color: white;
   padding: 12px;
@@ -130,7 +130,7 @@
 }
 .profile_right_reset_password button {
   border-radius: 8px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border: none;
   color: white;
   padding: 12px;
@@ -141,14 +141,14 @@
 .profile_right_reset_password button:first-child {
   align-self: flex-end;
   background-color: white;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--secondary);
 
   gap: 0;
   color: var(--primary);
 }
 .profile_right_reset_password button:first-child:hover {
-  background-color: var(--primary);
-  border: 1px solid var(--primary);
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
   color: white;
 }
 .reset_password_from_hide {

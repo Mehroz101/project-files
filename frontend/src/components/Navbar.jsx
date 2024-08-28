@@ -42,7 +42,7 @@ const Navbar = () => {
                 <Link to="/searchResult" onClick={() => setNavbar(false)}>Find Parking</Link>
               </li>
               <li>
-                <Link onClick={() => setNavbar(false)}>About</Link>
+                <Link to="/aboutus" onClick={() => setNavbar(false)}>About</Link>
               </li>
               <li>
                 <Link onClick={() => setNavbar(false)}>Contact</Link>

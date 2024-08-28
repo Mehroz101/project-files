@@ -86,11 +86,11 @@ const Reservation = () => {
               <div className="input_combo_box">
                 <div className="input_box">
                   <label htmlFor="expire">Expiry</label>
-                  <input type="date" placeholder="08/12/2024" />
+                  <input type="string" placeholder="12/24" />
                 </div>
                 <div className="input_box">
                   <label htmlFor="cvv">CVV</label>
-                  <input type="number" placeholder="1234" />
+                  <input type="number" placeholder="123" />
                 </div>
               </div>
               <div className="input_combo_box">

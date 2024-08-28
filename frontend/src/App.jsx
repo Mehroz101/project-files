@@ -18,6 +18,7 @@ import ReservationHistory from "./components/ReservationHistory";
 import Earning from "./parkingOwner/components/Earning";
 import MessagesContainer from "./components/MessagesContainer";
 import Dashboard from "./parkingOwner/components/Dashboard";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/searchResult" element={<MainApp />} />
+      <Route path="/aboutus" element={<AboutUs />} />
 
       <Route path="/profile" element={<Profile />}>
         <Route index element={<AccountInformation />} />

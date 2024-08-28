@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "../assets/hero_img.png";
+import { Link } from "react-router-dom";
+import ReviewPopup from "./ReviewPopup";
 
 const ReservationHistory = () => {
+  const [reviewBox, setReviewBox] = useState(false);
+  const hidePopupFun = () => {
+    setReviewBox(false);
+  };
   return (
     <div className="reservation_history_container">
       <h2>Booking History</h2>
@@ -62,8 +68,8 @@ const ReservationHistory = () => {
                 <span className="status completed">Completed</span>
               </td>
               <td>
-              {/* <button>Direction</button> */}
-              <button>Review</button>
+                {/* <button>Direction</button> */}
+                <button onClick={() => setReviewBox(true)}>Review</button>
               </td>
             </tr>
             <tr>
@@ -81,8 +87,8 @@ const ReservationHistory = () => {
                 <span className="status pending">Pending</span>
               </td>
               <td>
-              <button>Direction</button>
-              {/* <button>Review</button> */}
+                <button>Direction</button>
+                {/* <button>Review</button> */}
               </td>
             </tr>
             <tr>
@@ -100,14 +106,16 @@ const ReservationHistory = () => {
                 <span className="status confirm">Confirmed</span>
               </td>
               <td>
-              <button>Direction</button>
-              {/* <button>Review</button> */}
+                <button>Direction</button>
+                {/* <button>Review</button> */}
               </td>
             </tr>
             {/* Add more rows as needed */}
           </tbody>
         </table>
       </div>
+
+      {reviewBox && <ReviewPopup hidePopUp={hidePopupFun} />}
     </div>
   );
 };

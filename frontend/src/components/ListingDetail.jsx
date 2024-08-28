@@ -42,7 +42,8 @@ const ListingDetail = ({ onHideDetail }) => {
           </button>
         </div>
         <div className="listing_detail_section">
-          <h2 className="listing_detail_title">Mall of Multan, Multan</h2>
+          <h2 className="listing_detail_title">Mall of Multan, Multan  </h2>
+          <p className="address">Near Nadren Bypass, Bosan road, Multan</p>
           <div className="badge_shortdesc">
             <span className="badge">Secure</span>
             <span className="short_description">
